@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module"
+           version="2.5"
+           method="upgrade">
+	<name>Ajax Who's Online</name>
+	<creationDate>December 15, 2015</creationDate>
+	<author>Alexandr Yakimov</author>
+	<authorUrl>https://plus.google.com/u/0/+AlexandrYakimov</authorUrl>
+	<copyright>Copyright (C) 2015. All rights reserved.</copyright>
+	<license>GNU General Public License version 2, or later.</license>
+	<version>0.1a</version>
+	<description>MOD_AJAXONLINE_DESC</description>
+
+	<files>
+		<filename module="mod_ajaxonline">mod_ajaxonline.php</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_ajaxonline.ini</language>
+<!--		<language tag="ru-RU">language/ru-RU/ru-RU.mod_ajaxonline.ini</language>-->
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="format"
+				       type="list"
+				       default="html"
+				       label="MOD_AJAXONLINE_FORMAT_LABEL"
+				       description="MOD_AJAXONLINE_FORMAT_DESC">
+					<option value="debug">Debug</option>
+					<option value="raw">Raw</option>
+					<option value="json">JSON</option>
+					<option value="html">HTML list</option>
+				</field>
+
+				<field name="loadJquery"
+				       type="list"
+				       default="1"
+				       label="MOD_AJAXONLINE_LOAD_JQUERY_LABEL"
+				       description="MOD_AJAXONLINE_LOAD_JQUERY_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				
+				<field name="userefresh"
+				       type="list"
+				       default="1"
+				       label="MOD_AJAXONLINE_USEREFRESH_LABEL"
+				       description="MOD_AJAXONLINE_USEREFRESH_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+					   
+				<field name="refPeriod"
+				       type="text"
+				       default="5000"
+				       label="MOD_AJAXONLINE_REFPERIOD_LABEL"
+				       description="MOD_AJAXONLINE_REFPERIOD_DESC"/>
+					   
+				<field name="useincperiod"
+				       type="list"
+				       default="1"
+				       label="MOD_AJAXONLINE_USEINCPERIOD_LABEL"
+				       description="MOD_AJAXONLINE_USEINCPERIOD_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>	   
+			</fieldset>
+		</fields>
+	</config>
+</extension>
