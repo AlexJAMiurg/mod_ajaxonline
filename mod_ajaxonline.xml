@@ -8,7 +8,7 @@
 	<authorUrl>https://plus.google.com/u/0/+AlexandrYakimov</authorUrl>
 	<copyright>Copyright (C) 2015. All rights reserved.</copyright>
 	<license>GNU General Public License version 2, or later.</license>
-	<version>0.1a</version>
+	<version>0.1</version>
 	<description>MOD_AJAXONLINE_DESC</description>
 
 	<files>
@@ -27,13 +27,12 @@
 			<fieldset name="basic">
 				<field name="format"
 				       type="list"
-				       default="html"
+				       default="debug"
 				       label="MOD_AJAXONLINE_FORMAT_LABEL"
 				       description="MOD_AJAXONLINE_FORMAT_DESC">
 					<option value="debug">Debug</option>
 					<option value="raw">Raw</option>
 					<option value="json">JSON</option>
-					<option value="html">HTML list</option>
 				</field>
 
 				<field name="loadJquery"
@@ -67,7 +66,37 @@
 				       description="MOD_AJAXONLINE_USEINCPERIOD_DESC">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
-				</field>	   
+				</field>
+				<field name="usecolorchange"
+				       type="list"
+				       default="1"
+				       label="MOD_AJAXONLINE_USECOLORCHANGE_LABEL"
+				       description="MOD_AJAXONLINE_USECOLORCHANGE_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+			<fieldset name="colours">
+			<field name="basebackcolour"
+				       type="text"
+				       default="transparent"
+				       label="MOD_AJAXONLINE_BASEBACKCOLOUR_LABEL"
+				       description="MOD_AJAXONLINE_BASEBACKCOLOUR_DESC"/>
+			<field name="basebordercolour"
+				       type="text"
+				       default="transparent"
+				       label="MOD_AJAXONLINE_BASEBORDERCOLOUR_LABEL"
+				       description="MOD_AJAXONLINE_BASEBORDERCOLOUR_DESC"/>
+			<field name="indbackcolour"
+				       type="text"
+				       default="#BFFFBF"
+				       label="MOD_AJAXONLINE_INDBACKCOLOUR_LABEL"
+				       description="MOD_AJAXONLINE_INDBACKCOLOUR_DESC"/>
+			<field name="indbordercolour"
+				       type="text"
+				       default="#00B300"
+				       label="MOD_AJAXONLINE_INDBORDERCOLOUR_LABEL"
+				       description="MOD_AJAXONLINE_INDBORDERCOLOUR_DESC"/>
 			</fieldset>
 		</fields>
 	</config>

@@ -12,39 +12,37 @@
 class modAjaxOnlineHelper {
 
 	public static function getAjax() {
-
 		// Get module parameters
 		jimport('joomla.application.module.helper');
 		$input  = JFactory::getApplication()->input;
 		$module = JModuleHelper::getModule('ajaxonline');
 		$params = new JRegistry();
 		$params->loadString($module->params);
-		$format= $params->get('format', 'html');
-
+		$format= $params->get('format', 'debug');
 		$db    = JFactory::getDbo();
 		$query = $db->getQuery(true)
-			->select($db->quoteName(array('a.username', 'a.userid', 'a.client_id')))
-			->from('#__session AS a')
-			->where($db->quoteName('a.userid') . ' != 0')
-			->where($db->quoteName('a.client_id') . ' = 0')
-			->group($db->quoteName(array('a.username', 'a.userid', 'a.client_id')));
-
-		$user = JFactory::getUser();
-				return array();
-			$query->join('LEFT', '#__user_usergroup_map AS m ON m.user_id = a.userid')
-				->join('LEFT', '#__usergroups AS ug ON ug.id = m.group_id')
-				->where('ug.id in (' . implode(',', $groups) . ')')
-				->where('ug.id <> 1');
-		}
+			->select($db->quoteName(array('userid','u.name')))
+			->from('#__session AS s')
+			->where($db->quoteName('s.guest') . ' != 1')
+			->join('LEFT', '#__users AS u ON s.userid = u.id');
 		$db->setQuery($query);
 		try
 		{
 		 $users = $db->loadObjectList('username');
-		 return $users;
+
+		$users= $db->loadColumn(1);
+		$userlist="<ul class=\"ajx_userlist\">";
+//		echo "<li>".$query."</li>";
+		foreach ($users as $name){
+			$userlist.="<li>".$name."</li>";
+		}
+		$userlist.="</ul>";
+		 return $userlist;
 		}
 		catch (RuntimeException $e)
 		{
-			return "MOD_AJAXONLINE_HELPER_ERROR";
+//			return "MOD_AJAXONLINE_HELPER_ERROR";
+          return "test - ".$e." - ".$users;
 		}
 	}
 }
