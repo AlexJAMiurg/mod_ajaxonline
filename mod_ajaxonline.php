@@ -17,10 +17,13 @@ require_once __DIR__ . '/helper.php';
 $doc = JFactory::getDocument();
 
 $loadJquery = $params->get('loadJquery', 1);
-$format= $params->get('format', 'html');
-$refPeriod= $params->get('refPeriod', 5000);
-$useincperiod= $params->get('useincperiod', 1);
-
+$format = $params->get('format', 'html');
+$refPeriod = $params->get('refPeriod', 5000);
+$useincperiod = $params->get('useincperiod', 1);
+$basebackcolour = $params->get('basebackcolour', 'transparent');
+$basebordercolour = $params->get('basebordercolour', 'transparent');
+$indbackcolour = $params->get('indbackcolour', '#BFFFBF');
+$indbordercolour = $params->get('indbordercolour', '#00B300');
 // Load jQuery
 if ($loadJquery == '1') {
 	$doc->addScript('//code.jquery.com/jquery-latest.min.js');
@@ -46,11 +49,11 @@ function check_online(first_load) {
 				jQuery( \".ajaxonline_status\" ).html(ans);
 				uptime = {$refPeriod};
                 if(first_load != 1){
-				jQuery( \".ajaxonline_status\" ).css( \"border-color\",\"#00B300\");
-				jQuery(\".ajaxonline_status\").css( \"background-color\",\"#BFFFBF\");
+				jQuery( \".ajaxonline_status\" ).css( \"border-color\",\"{$indbordercolour}\");
+				jQuery(\".ajaxonline_status\").css( \"background-color\",\"{$indbackcolour}\");
 				col_time = setTimeout(function() {
-					jQuery( \".ajaxonline_status\" ).css( \"border-color\",\"silver\");
-					jQuery(\".ajaxonline_status\").css( \"background-color\",\"white\");
+					jQuery( \".ajaxonline_status\" ).css( \"border-color\",\"{$basebordercolour}\");
+					jQuery(\".ajaxonline_status\").css( \"background-color\",\"{$basebordercolour}\");
 					clearTimeout(col_time);
 					}, 3000);
                     }
