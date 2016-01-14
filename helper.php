@@ -13,7 +13,7 @@ class modAjaxOnlineHelper {
 
 	public static function getAjax() {
 		// Set UTF-8  multilanguage support
-		header('Content-Type: text/html; charset=utf-8');.
+		header('Content-Type: text/html; charset=utf-8');
 		// Get module parameters
 		jimport('joomla.application.module.helper');
 		$input  = JFactory::getApplication()->input;
