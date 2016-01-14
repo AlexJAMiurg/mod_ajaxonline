@@ -2,10 +2,10 @@
 
 /**
  * File       default.php
- * Created    5/22/13 6:43 AM
- * Author     Matt Thomas | matt@betweenbrain.com | http://betweenbrain.com
- * Support    https://github.com/betweenbrain/
- * Copyright  Copyright (C) 2013 betweenbrain llc. All Rights Reserved.
+ * Created    December 15, 2015
+ * Author     Alexandr Yakimov | https://plus.google.com/u/0/+AlexandrYakimov
+ * Support    https://github.com/AlexJAMiurg
+ * Copyright  Copyright (C) 2015 Alexandr Yakimov. All Rights Reserved.
  * License    GNU General Public License version 2, or later.
  */
 

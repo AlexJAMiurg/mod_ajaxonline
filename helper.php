@@ -2,16 +2,18 @@
 
 /**
  * File       helper.php
- * Created    6/7/13 1:51 PM
- * Author     Matt Thomas | matt@betweenbrain.com | http://betweenbrain.com
- * Support    https://github.com/betweenbrain/
- * Copyright  Copyright (C) 2013 betweenbrain llc. All Rights Reserved.
+ * Created    December 15, 2015
+ * Author     Alexandr Yakimov | https://plus.google.com/u/0/+AlexandrYakimov
+ * Support    https://github.com/AlexJAMiurg
+ * Copyright  Copyright (C) 2015 Alexandr Yakimov. All Rights Reserved.
  * License    GNU General Public License version 2, or later.
  */
 
 class modAjaxOnlineHelper {
 
 	public static function getAjax() {
+		// Set UTF-8  multilanguage support
+		header('Content-Type: text/html; charset=utf-8');.
 		// Get module parameters
 		jimport('joomla.application.module.helper');
 		$input  = JFactory::getApplication()->input;
@@ -19,6 +21,7 @@ class modAjaxOnlineHelper {
 		$params = new JRegistry();
 		$params->loadString($module->params);
 		$format= $params->get('format', 'debug');
+		//SQL query
 		$db    = JFactory::getDbo();
 		$query = $db->getQuery(true)
 			->select($db->quoteName(array('userid','u.name')))
@@ -37,12 +40,13 @@ class modAjaxOnlineHelper {
 			$userlist.="<li>".$name."</li>";
 		}
 		$userlist.="</ul>";
+		//return UL with 
 		 return $userlist;
 		}
 		catch (RuntimeException $e)
 		{
-//			return "MOD_AJAXONLINE_HELPER_ERROR";
-          return "test - ".$e." - ".$users;
+			return "MOD_AJAXONLINE_HELPER_ERROR";
+//         return "test - ".$e." - ".$users;
 		}
 	}
 }

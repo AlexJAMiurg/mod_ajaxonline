@@ -2,11 +2,11 @@
 
 /**
  *
- * File       mod_session.php
- * Created    5/22/13 6:43 AM
- * Author     Matt Thomas | matt@betweenbrain.com | http://betweenbrain.com
- * Support    https://github.com/betweenbrain/
- * Copyright  Copyright (C) 2013 betweenbrain llc. All Rights Reserved.
+ * File       mod_ajaxonline.php
+ * Created    December 15, 2015
+ * Author     Alexandr Yakimov | https://plus.google.com/u/0/+AlexandrYakimov
+ * Support    https://github.com/AlexJAMiurg
+ * Copyright  Copyright (C) 2015 Alexandr Yakimov. All Rights Reserved.
  * License    GNU General Public License version 2, or later.
  */
 
@@ -15,7 +15,7 @@ require_once __DIR__ . '/helper.php';
 
 // Instantiate global document object
 $doc = JFactory::getDocument();
-
+// Get module parameters
 $loadJquery = $params->get('loadJquery', 1);
 $format = $params->get('format', 'html');
 $refPeriod = $params->get('refPeriod', 5000);
