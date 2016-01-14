@@ -16,7 +16,7 @@ require_once __DIR__ . '/helper.php';
 // Instantiate global document object
 $doc = JFactory::getDocument();
 // Get module parameters
-$loadJquery = $params->get('loadJquery', 1);
+$loadJquery = $params->get('loadJquery', 0);
 $format = $params->get('format', 'html');
 $refPeriod = $params->get('refPeriod', 5000);
 $useincperiod = $params->get('useincperiod', 1);
@@ -27,6 +27,7 @@ $indbordercolour = $params->get('indbordercolour', '#00B300');
 // Load jQuery
 if ($loadJquery == '1') {
 	$doc->addScript('//code.jquery.com/jquery-latest.min.js');
+	
 }
 
 $js = "

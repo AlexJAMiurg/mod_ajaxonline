@@ -27,7 +27,7 @@
 			<fieldset name="basic">
 				<field name="format"
 				       type="list"
-				       default="debug"
+				       default="raw"
 				       label="MOD_AJAXONLINE_FORMAT_LABEL"
 				       description="MOD_AJAXONLINE_FORMAT_DESC">
 					<option value="debug">Debug</option>
@@ -37,7 +37,7 @@
 
 				<field name="loadJquery"
 				       type="list"
-				       default="1"
+				       default="0"
 				       label="MOD_AJAXONLINE_LOAD_JQUERY_LABEL"
 				       description="MOD_AJAXONLINE_LOAD_JQUERY_DESC">
 					<option value="1">Yes</option>
