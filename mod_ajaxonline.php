@@ -20,6 +20,7 @@ $loadJquery = $params->get('loadJquery', 0);
 $format = $params->get('format', 'html');
 $refPeriod = $params->get('refPeriod', 5000);
 $useincperiod = $params->get('useincperiod', 1);
+$usecolorchange = $params->get('usecolorchange', 1);
 $basebackcolour = $params->get('basebackcolour', 'transparent');
 $basebordercolour = $params->get('basebordercolour', 'transparent');
 $indbackcolour = $params->get('indbackcolour', '#BFFFBF');
@@ -49,7 +50,7 @@ function check_online(first_load) {
    			} else {
 				jQuery( \".ajaxonline_status\" ).html(ans);
 				uptime = {$refPeriod};
-                if(first_load != 1){
+                if((first_load != 1)AND ({$useincperiod})){
 				jQuery( \".ajaxonline_status\" ).css( \"border-color\",\"{$indbordercolour}\");
 				jQuery(\".ajaxonline_status\").css( \"background-color\",\"{$indbackcolour}\");
 				col_time = setTimeout(function() {
