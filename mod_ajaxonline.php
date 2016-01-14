@@ -50,7 +50,7 @@ function check_online(first_load) {
    			} else {
 				jQuery( \".ajaxonline_status\" ).html(ans);
 				uptime = {$refPeriod};
-                if((first_load != 1) && ({$useincperiod})){
+                if((first_load != 1) && ({$usecolorchange})){
 				jQuery( \".ajaxonline_status\" ).css( \"border-color\",\"{$indbordercolour}\");
 				jQuery(\".ajaxonline_status\").css( \"background-color\",\"{$indbackcolour}\");
 				col_time = setTimeout(function() {
