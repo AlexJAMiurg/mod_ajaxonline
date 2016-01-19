@@ -67,6 +67,31 @@
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
+				<field type="spacer" name="myspacer" hr="true" />
+				<field name="useusercount"
+				       type="list"
+				       default="1"
+				       label="MOD_AJAXONLINE_USEUSERCOUNT_LABEL"
+				       description="MOD_AJAXONLINE_USEUSERCOUNT_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="useusernames"
+				       type="list"
+				       default="1"
+				       label="MOD_AJAXONLINE_USEUSERNAMES_LABEL"
+				       description="MOD_AJAXONLINE_USEUSERNAMES_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="countguests"
+				       type="list"
+				       default="1"
+				       label="MOD_AJAXONLINE_COUNTGUESTS_LABEL"
+				       description="MOD_AJAXONLINE_COUNTGUESTS_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
 			</fieldset>
 			<fieldset name="colours">
 			<field name="usecolorchange"
