@@ -21,6 +21,7 @@ class modAjaxOnlineHelper {
 		$params = new JRegistry();
 		$params->loadString($module->params);
 		$format= $params->get('format', 'debug');
+		$useusercounter= $params->get('useusercount', 0);
 		//SQL query
 		$db    = JFactory::getDbo();
 		$query = $db->getQuery(true)
@@ -29,12 +30,16 @@ class modAjaxOnlineHelper {
 			->where($db->quoteName('s.guest') . ' != 1')
 			->join('LEFT', '#__users AS u ON s.userid = u.id');
 		$db->setQuery($query);
+		$usercount=$db->getNumRows();
 		try
 		{
 		 $users = $db->loadObjectList('username');
-
+		 $userlist="";
 		$users= $db->loadColumn(1);
-		$userlist="<ul class=\"ajx_userlist\">";
+		if ($useusercounter) {
+			$userlist.="MOD_AJAXONLINE_USERCOUNTER_TEXT". $usercount;
+		}
+		$userlist.="<ul class=\"ajx_userlist\">";
 //		echo "<li>".$query."</li>";
 		foreach ($users as $name){
 			$userlist.="<li>".$name."</li>";

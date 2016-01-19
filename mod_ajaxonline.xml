@@ -70,7 +70,7 @@
 				<field type="spacer" name="myspacer" hr="true" />
 				<field name="useusercount"
 				       type="list"
-				       default="1"
+				       default="0"
 				       label="MOD_AJAXONLINE_USEUSERCOUNT_LABEL"
 				       description="MOD_AJAXONLINE_USEUSERCOUNT_DESC">
 					<option value="1">Yes</option>
