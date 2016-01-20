@@ -64,7 +64,7 @@ function check_online(first_load) {
 			autouptimer=setTimeout(function() { check_online();}, uptime);
 	},
 	error: function(response) {
-		jQuery( \".ajaxonline_status\" ).html(\"error: \"+ans);
+		jQuery( \".ajaxonline_status\" ).html(\"".JText::_('MOD_AJAXONLINE_HELPER_ERROR')."\");
 	}
 	});
 	return false;

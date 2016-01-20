@@ -8,7 +8,7 @@
 	<authorUrl>https://plus.google.com/u/0/+AlexandrYakimov</authorUrl>
 	<copyright>Copyright (C) 2015. All rights reserved.</copyright>
 	<license>GNU General Public License version 2, or later.</license>
-	<version>0.2</version>
+	<version>0.3</version>
 	<description>MOD_AJAXONLINE_DESC</description>
 
 	<files>
@@ -64,6 +64,31 @@
 				       default="1"
 				       label="MOD_AJAXONLINE_USEINCPERIOD_LABEL"
 				       description="MOD_AJAXONLINE_USEINCPERIOD_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="spacer" name="myspacer" hr="true" />
+				<field name="useusercount"
+				       type="list"
+				       default="0"
+				       label="MOD_AJAXONLINE_USEUSERCOUNT_LABEL"
+				       description="MOD_AJAXONLINE_USEUSERCOUNT_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="useusernames"
+				       type="list"
+				       default="1"
+				       label="MOD_AJAXONLINE_USEUSERNAMES_LABEL"
+				       description="MOD_AJAXONLINE_USEUSERNAMES_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="countguests"
+				       type="list"
+				       default="1"
+				       label="MOD_AJAXONLINE_COUNTGUESTS_LABEL"
+				       description="MOD_AJAXONLINE_COUNTGUESTS_DESC">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
