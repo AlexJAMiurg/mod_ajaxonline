@@ -40,8 +40,8 @@
 				       default="0"
 				       label="MOD_AJAXONLINE_LOAD_JQUERY_LABEL"
 				       description="MOD_AJAXONLINE_LOAD_JQUERY_DESC">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 				
 				<field name="userefresh"
@@ -49,8 +49,8 @@
 				       default="1"
 				       label="MOD_AJAXONLINE_USEREFRESH_LABEL"
 				       description="MOD_AJAXONLINE_USEREFRESH_DESC">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 					   
 				<field name="refPeriod"
@@ -64,8 +64,8 @@
 				       default="1"
 				       label="MOD_AJAXONLINE_USEINCPERIOD_LABEL"
 				       description="MOD_AJAXONLINE_USEINCPERIOD_DESC">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 				<field type="spacer" name="myspacer" hr="true" />
 				<field name="useusercount"
@@ -73,24 +73,24 @@
 				       default="0"
 				       label="MOD_AJAXONLINE_USEUSERCOUNT_LABEL"
 				       description="MOD_AJAXONLINE_USEUSERCOUNT_DESC">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 				<field name="useusernames"
 				       type="list"
 				       default="1"
 				       label="MOD_AJAXONLINE_USEUSERNAMES_LABEL"
 				       description="MOD_AJAXONLINE_USEUSERNAMES_DESC">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 				<field name="countguests"
 				       type="list"
 				       default="1"
 				       label="MOD_AJAXONLINE_COUNTGUESTS_LABEL"
 				       description="MOD_AJAXONLINE_COUNTGUESTS_DESC">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 				</field>
 			</fieldset>
 			<fieldset name="colours">
@@ -99,8 +99,8 @@
 				       default="1"
 				       label="MOD_AJAXONLINE_USECOLORCHANGE_LABEL"
 				       description="MOD_AJAXONLINE_USECOLORCHANGE_DESC">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
 			</field>
 			<field name="basebackcolour"
 				       type="text"
