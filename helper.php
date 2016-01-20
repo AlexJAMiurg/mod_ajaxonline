@@ -30,15 +30,16 @@ class modAjaxOnlineHelper {
 			->where($db->quoteName('s.guest') . ' != 1')
 			->join('LEFT', '#__users AS u ON s.userid = u.id');
 		$db->setQuery($query);
-		$usercount=$db->getNumRows();
+		$userlist="";
+		if ($useusercounter) {
+			$usercount=$db->getNumRows();
+			$userlist.="MOD_AJAXONLINE_USERCOUNTER_TEXT". $usercount;
+		}
 		try
 		{
 		 $users = $db->loadObjectList('username');
-		 $userlist="";
+		 
 		$users= $db->loadColumn(1);
-		if ($useusercounter) {
-			$userlist.="MOD_AJAXONLINE_USERCOUNTER_TEXT". $usercount;
-		}
 		$userlist.="<ul class=\"ajx_userlist\">";
 //		echo "<li>".$query."</li>";
 		foreach ($users as $name){
