@@ -39,14 +39,11 @@ class modAjaxOnlineHelper {
 			$usercount=$db->getNumRows();
 			$userlist.="<span class=\"ajx_usercounter\">".JText::_('MOD_AJAXONLINE_USERCOUNTER_TEXT') ." ". $usercount."</span>";
 		}
-//		try
-//		{
          if ($useusernames){
 		 $users = $db->loadObjectList('username');
 		 
 		$users= $db->loadColumn(1);
 		$userlist.="<ul class=\"ajx_userlist\">";
-//		echo "<li>".$query."</li>";
 		foreach ($users as $name){
 			$userlist.="<li>".$name."</li>";
 		}
@@ -70,11 +67,5 @@ class modAjaxOnlineHelper {
       }
 		//return UL with 
 		 return $userlist;
-//		}
-//		catch (RuntimeException $e)
-//		{
-//			return "MOD_AJAXONLINE_HELPER_ERROR";
-//         return "test - ".$e." - ".$users;
-//		}
 	}
 }
