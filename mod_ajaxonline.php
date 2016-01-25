@@ -64,7 +64,7 @@ function check_online(first_load) {
 			autouptimer=setTimeout(function() { check_online();}, uptime);
 	},
 	error: function(response) {
-		jQuery( \".ajaxonline_status\" ).html(\"<span> Ошибка при обработке или отправке AJAX запроса. <span> <a href='#' onclick='check_online(1);'> MOD_AJAXONLINE_REFRESH </a>\");
+		jQuery( \".ajaxonline_status\" ).html(\"<span>".JText::_('MOD_AJAXONLINE_HELPER_ERROR')."<span> <a href='#' onclick='check_online(1);'>".JText::_('MOD_AJAXONLINE_REFRESH')."</a>\");
 	}
 	});
 	return false;
